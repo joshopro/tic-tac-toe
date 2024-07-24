@@ -1,6 +1,6 @@
 import React from 'react';
 import Cell from './Cell';
-import styles from '../styles/Board.module.css';
+import styles from '@/styles/Board.module.css';
 
 interface BoardProps {
   board: string[];

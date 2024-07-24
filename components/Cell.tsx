@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from '../styles/Cell.module.css';
+import React from "react";
+import styles from "@/styles/Cell.module.css";
 
 interface CellProps {
   value: string;
@@ -8,7 +8,7 @@ interface CellProps {
 
 const Cell: React.FC<CellProps> = ({ value, onClick }) => {
   return (
-    <div className={styles.cell} role='cell' onClick={onClick}>
+    <div className={styles.cell} role="cell" onClick={onClick}>
       {value}
     </div>
   );

@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect } from 'react';
-import Board from './Board';
-import styles from '../styles/Game.module.css';
+import React, { useState } from "react";
+import Board from "./Board";
+import styles from "@/styles/Game.module.css";
 
-const initialState = Array(9).fill('');
+const initialState = Array(9).fill("");
 
 const Game: React.FC = () => {
   const [board, setBoard] = useState(initialState);
@@ -15,7 +15,7 @@ const Game: React.FC = () => {
     if (board[index] || winner) return;
 
     const newBoard = board.slice();
-    newBoard[index] = isXNext ? 'X' : 'O';
+    newBoard[index] = isXNext ? "X" : "O";
     setBoard(newBoard);
     setIsXNext(!isXNext);
     checkWinner(newBoard);
@@ -41,8 +41,8 @@ const Game: React.FC = () => {
       }
     }
 
-    if (board.every(cell => cell)) {
-      setWinner('Draw');
+    if (board.every((cell) => cell)) {
+      setWinner("Draw");
     }
   };
 
@@ -55,8 +55,14 @@ const Game: React.FC = () => {
   return (
     <div className={styles.game}>
       <Board board={board} onCellClick={handleClick} />
-      {winner && <div className={styles.message}>{winner === 'Draw' ? 'It\'s a Draw!' : `Winner: ${winner}`}</div>}
-      <button className={styles.resetButton} onClick={handleReset}>Reset</button>
+      {winner && (
+        <div className={styles.message}>
+          {winner === "Draw" ? "It's a Draw!" : `Winner: ${winner}`}
+        </div>
+      )}
+      <button className={styles.resetButton} onClick={handleReset}>
+        Reset
+      </button>
     </div>
   );
 };
