@@ -8,7 +8,7 @@ interface CellProps {
 
 const Cell: React.FC<CellProps> = ({ value, onClick }) => {
   return (
-    <div className={styles.cell} onClick={onClick}>
+    <div className={styles.cell} role='cell' onClick={onClick}>
       {value}
     </div>
   );

@@ -9,7 +9,7 @@ interface BoardProps {
 
 const Board: React.FC<BoardProps> = ({ board, onCellClick }) => {
   return (
-    <div className={styles.board}>
+    <div className={styles.board} role='board'>
       {board.map((value, index) => (
         <Cell key={index} value={value} onClick={() => onCellClick(index)} />
       ))}
