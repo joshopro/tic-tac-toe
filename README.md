@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tic Tac Toe Game
 
-## Getting Started
+This is a Tic Tac Toe game built with Next.js, React, and TypeScript. The application supports a player versus AI mode.
 
-First, run the development server:
+## Installation
 
-```bash
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/joshopro/tic-tac-toe
+   cd tic-tac-toe
+    ```
+
+2. Install the dependencies:
+    ```sh
+    npm install
+    ```
+
+## Running the Application
+
+To run the application locally, use the following command:
+```sh
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open your browser and navigate to `http://localhost:3000` to see the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Running Tests
+To run the unit tests, use the following command:
+```sh
+npm test
+```
 
-## Learn More
+## Features
+- 3x3 Tic Tac Toe grid.
+- Players can click on a cell to mark it with "X" or "O".
+- The game detects a win or a draw and displays an appropriate message.
+- A "Reset" button to start a new game.
+- Includes animations for better user experience.
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
+- Next.js
+- React
+- TypeScript
+- CSS Modules
+- Jest
+- React Testing Library
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Approach and Design Decisions
+- **State Management:** Used React's `useState` hook for managing the game state.
+- **Styling:** Used CSS Modules for styling the components to ensure scoped and maintainable CSS.
+- **Testing:** Implemented unit tests using Jest and React Testing Library to cover rendering, game logic, and interaction scenarios.
+- **Animations:** Added basic animations for cell clicks to enhance user experience.
